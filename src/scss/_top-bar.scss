@@ -1,0 +1,12 @@
+.top-bar {
+  box-shadow: 0 0 2px rgba(0, 0, 0, .14), 0 2px 4px rgba(0, 0, 0, .28);
+
+  &,
+  ul {
+    background-color: #3367d6;
+  }
+
+  a {
+    color: white;
+  }
+}

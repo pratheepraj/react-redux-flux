@@ -1,0 +1,23 @@
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea {
+  border-color: $colorGrey;
+  box-shadow: none;
+
+  &:focus {
+    border-color: $colorDarkGrey;
+    box-shadow: none;
+  }
+}

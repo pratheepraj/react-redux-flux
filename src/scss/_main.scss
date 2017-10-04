@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  color: $fontColor;
+  background-color: #f2f2f2;
+}
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}

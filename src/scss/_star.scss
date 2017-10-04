@@ -1,0 +1,51 @@
+// Modifed from https://codepen.io/estwo/pen/wjnim
+
+@mixin shape-star(
+  $color: #ddd,
+  $size: 12px,
+  $denominator: 1.7
+) {
+  display: inline-block;
+  position: relative;
+  margin: 9px 0 7px;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -$size / $denominator;
+    left: -$size;
+  }
+
+  &,
+  &:before,
+  &:after {
+    width: 0;
+    height: 0;
+    border-top-width: $size / $denominator;
+    border-right-width: $size;
+    border-left-width: $size;
+    border-style: solid;
+    border-color: $color transparent transparent transparent;
+  }
+
+  &:before {
+    transform: rotate(70deg);
+  }
+
+  &:after {
+    transform: rotate(-70deg);
+  }
+}
+
+.star {
+  @include shape-star;
+
+  &.active,
+  &.active:before,
+  &.active:after {
+    border-color: #ffd76e transparent transparent transparent;
+  }
+}

@@ -1,0 +1,17 @@
+.emoji {
+  width: 32px;
+  margin-right: 8px;
+  background-color: transparent;
+  padding: 3px;
+  border-radius: 50px;
+
+  &.selectable {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: #ddd;
+    opacity: 1;
+  }
+}

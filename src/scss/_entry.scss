@@ -1,0 +1,99 @@
+.entry {
+  border-bottom: 1px solid $colorGrey;
+  &:hover {
+    background-color: #fbfafa;
+  }
+
+  &.active {
+    &:hover {
+      background-color: inherit;
+    }
+
+    article {
+      height: auto;
+      padding: 2rem 0 1rem;
+    }
+
+    .snippet {
+      visibility: hidden;
+    }
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5px;
+    cursor: pointer;
+  }
+
+  article {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .for-date {
+    color: #aaa;
+  }
+
+  .snippet {
+    width: 100%;
+  }
+
+  .for-emoji {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .for-star {
+    text-align: center;
+  }
+
+  .emoji {
+    position: relative;
+    top: -5px;
+  }
+
+  .star {
+    position: relative;
+    top: -2px;
+  }
+
+  .snippet {
+    height: 25px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 600px) {
+    .for-date {
+      flex: 0 0 85px;
+    }
+
+    header {
+      flex-wrap: nowrap;
+    }
+
+    .snippet {
+      flex-basis: auto;
+      flex-grow: 1;
+      width: auto;
+      padding: 0 $basePadding * 2;
+    }
+
+    .for-emoji {
+      flex-grow: 0;
+      order: 1;
+      flex: 0 0 40px;
+    }
+
+    .for-star {
+      order: 2;
+      flex: 0 0 40px;
+    }
+  }
+}

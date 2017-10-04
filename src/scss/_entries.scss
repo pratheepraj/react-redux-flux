@@ -1,0 +1,47 @@
+.entries {
+  .filter {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+
+    &.active {
+      .for-text {
+        background-color: #eae7e7;
+        border-color: #ddd;
+      }
+
+      .for-star {
+        background-color: #eae7e7;
+        border-color: #ddd;
+      }
+    }
+
+    .for-text {
+      line-height: 1;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5px 0 5px $basePadding;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border: 2px solid #eae7e7;
+      border-right: none;
+      cursor: pointer;
+    }
+
+    .for-star {
+      line-height: 1;
+      padding: 5px $basePadding;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border: 2px solid #eae7e7;
+      border-left: none;
+      cursor: pointer;
+    }
+  } // .filter
+
+  .card {
+    margin-bottom: 2px;
+  }
+}
